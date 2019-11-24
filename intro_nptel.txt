@@ -1,0 +1,39 @@
+1 one wayness--> x->f(x) is easy but f(x)->x is hard
+It is easy to compute but hard to invert;
+
+2 collision resistance
+given f(x), output two values x not equal to y, such that f(x)=f(y)
+ Magic function ,f satisfies 1 and 2
+
+ an even number x represents HEAD
+ an odd number x represents Tail
+
+ Alice and Bob shall be using the function f to communicate the parity of x.
+
+
+Alice picks up randomly a large integer, x and compute f(x)
+Bob tells Alice his guess of whether x is odd or even
+Alice then sends x to Bob
+Bob verifies by computing f(x)
+
+Can anyone cheat?
+1--> by listening to the value of f(x), Bob has to guess about the parity of x
+	as this is hard, Bob's probablity to guess x is 1/2(either even or odd)
+2--> After computinf f(x), Alice might change x such the f(x) = f(y), where x and y have different parity but this is again hard.
+
+Hence no one can cheat
+
+3 main goals of crytography:
+1--> cofidentiality(hiding the information from unauthorized access)
+2--> integrity(preventing information from unauthorized modification)
+3--> availability(should be easily available to authorized users)
+
+crytograhpy and crytoanalysis->crytology
+
+Threat to confidentiality
+Snooping-> Refers to unauthorized access or interception of informaiton. Encryption is used to make information non-intelligble to the snooper.
+Traffic Analysis-> Even an encrypted message can be analyzed to obtain some information, like say the identily of the sender and the recipient, the nature of the information(like text or image file).
+
+Threat to integrity
+Modification-> an attacker can modify the transmitted information, without needing to know the actual content.It could delay or change the content to foil the objective of a transaction.
+Masquerading: An attacker can modify the communication data to pretent(spoof) as a legal sender or receiver to obtain the information to which it does not have access.

@@ -1,0 +1,6 @@
+unconditional security:
+Adversary got unbounded computational power, that it has infinite power.
+
+Consider only Cipher text only attack(obtain key):
+plain-text distribution and key distribution are independentn
+
